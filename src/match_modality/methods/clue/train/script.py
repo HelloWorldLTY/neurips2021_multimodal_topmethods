@@ -155,7 +155,7 @@ scglue.models.configure_dataset(
     other, "NB", use_highly_variable=True,
     use_layer="counts", use_rep="X_pca",
     use_batch="batch", use_uid="uid"
-)
+) # I believe there are some problems in this part. X_pca only works for when "other" data are "ADT" data. If "other" data are atac data, I believe based on their design, use_rep should be "X_lsi". 
 
 
 print('Building model...')
